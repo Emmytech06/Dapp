@@ -15,11 +15,13 @@
 		width: 45px;
 	}
 
-	.banner_text {
+	/* .banner_text {
 		background-color: rgba(255, 255, 255, 9);
 		/* border-left: 10px solid rgb(0, 0, 0); */
-		width: 100%;
-	}
+	width: 100%;
+}
+
+*/
 }
 
 @media screen and (min-width: 800px) {
@@ -98,10 +100,14 @@
 }
 
 .bg-blue {
-	background: linear-gradient(to bottom right, rgb(5, 99, 171), rgb(23, 69, 167), rgb(255, 255, 255));
+	background: linear-gradient(to bottom right, rgb(5, 99, 171), rgb(23, 69, 167), rgba(255, 255, 255, 9));
 	background-color: lightskyblue;
 }
 
+.bg-lblue {
+	background: linear-gradient(to bottom right, #38b6ff, #20b5ff, rgb(255, 255, 255));
+	background-color: #38b6ff;
+}
 
 
 .banner_img {
@@ -150,4 +156,23 @@ div.issues h5 {
 
 .rounded-5 {
 	border-radius: 15px;
+}
+
+@keyframes slideAndScale {
+	0% {
+		transform: translateX(100%) scale(0.8);
+		/* Starting position: off-screen and scaled down */
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0) scale(1);
+		/* Ending position: on-screen and at normal size */
+		opacity: 1;
+	}
+}
+
+.slide-and-scale {
+	animation: slideAndScale 2s ease-in-out;
+	/* Adjust the animation duration as needed */
 }
