@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg-blue {
+    background: linear-gradient(to bottom right, rgb(5, 99, 171), rgb(23, 69, 167), rgba(255, 255, 255, 9));
+    background-color: lightskyblue;
+}
+
+.bg-black {
+    background: linear-gradient(to bottom right, black, black, white);
+    background-color: black;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: white;
+    color: skyblue;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    animation: bounceIn 1.5s ease;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    padding-right: 15px;
+}
+
+.hero {
+    padding: 100px 0px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+/* Style the individual slides */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    animation: imagefade 6s infinite;
+}
+
+/* Add keyframes for the background image slideshow animation */
+@keyframes imagefade {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+    }
+}
+
+.left-content {
+    color: white;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 20px;
+    text-shadow: #333;
+}
+
+.right-content {
+    margin-right: 20px;
+}
+
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: black;
+    color: rgb(5, 99, 171);
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    80% {
+        transform: translateX(-5px);
+    }
+
+    40%,
+    60% {
+        transform: translateX(5px);
+    }
+}
+
+.cta-button {
+    /* ... your previous button styles ... */
+    animation: shake 3s linear infinite, pause 1s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes pause {
+
+    0%,
+    100% {
+        animation-play-state: paused;
+    }
+
+    50% {
+        animation-play-state: running;
+    }
+}
+
+
+
+
+/* Style the features section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: white;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    animation: slideIn 1s ease;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style the footer */
+/* footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: black;
+    color: #fff;
+} */
+
+/* Adjust styles for responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Define the bounce-in animation */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-200px);
+        /* Start position, above the viewport */
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(30px);
+        /* Bounce height */
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateY(-10px);
+        /* Slight bounce back */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* End position, at the normal position */
+    }
+}
+
+/* Apply the animation to the hero-content */
+.hero-content {
+    animation: bounceIn 1.5s ease;
+    /* Adjust the duration and easing as needed */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        /* Start position, completely outside the viewport on the left */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        /* End position, at the normal position */
+        opacity: 1;
+    }
+}
+
+.footer {
+    display: flex;
+
+    color: white;
+    align-items: center;
+}
+
+.black-section {
+    padding: 100px;
+    background-color: black;
+}
+
+.blue-section {
+    background: linear-gradient(to bottom right, rgb(5, 99, 171), rgb(23, 69, 167), rgba(255, 255, 255, 9));
+    padding: 100px;
+}

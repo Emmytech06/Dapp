@@ -17,11 +17,11 @@
 
 	/* .banner_text {
 		background-color: rgba(255, 255, 255, 9);
-		/* border-left: 10px solid rgb(0, 0, 0); */
+		border-left: 10px solid rgb(0, 0, 0);
 	width: 100%;
-}
+} */
 
-*/
+
 }
 
 @media screen and (min-width: 800px) {
@@ -174,5 +174,41 @@ div.issues h5 {
 
 .slide-and-scale {
 	animation: slideAndScale 2s ease-in-out;
-	/* Adjust the animation duration as needed */
+}
+
+
+.image-container {
+	position: absolute;
+	margin-left: 150px;
+	margin-top: -250px;
+	right: -100%;
+	animation: slideFromRight 3s forwards, slideUp 5s forwards 5s ease-in-out;
+}
+
+@keyframes slideFromRight {
+	0% {
+		right: -100%;
+		/* Start position off to the right */
+	}
+
+	100% {
+		right: 0;
+		/* End position at the parent div's right side */
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		top: 0;
+		/* Start position at the top */
+	}
+
+	100% {
+		top: -100%;
+		/* End position off the top */
+		opacity: 1;
+	}
+
+
 }
