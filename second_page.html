@@ -57,32 +57,21 @@
                 <img src="IMAGES/bblogo2.png" class="" style="width: 70px;">
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero bg-blue">
-        <div class="animation-container">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <!-- Add more boxes as needed -->
-        </div>
         <div class="hero-content">
-            <!-- <div class="slideshow-container">
-                <div class="slide fade" style="background-image: url('IMAGES/tether.png');"></div>
-                <div class="slide fade" style="background-image: url('IMAGES/algorand.jpeg');"></div>
-                <div class="slide fade" style="background-image: url('IMAGES/bitcoin.jpeg');"></div> -->
             <div class="left-content">
-                <h1>WELCOME TO BLUEBRIDGE </h1>
-                <p>Seamlessly Manage Your Digital Assets And Transactions </p>
+                <h1>WELCOME&nbsp;TO&nbsp;BLUEBRIDGE </h1>
+                <p style="font-size: large;">Seamlessly Manage Your Digital Assets And Transactions </p>
             </div>
             <div class="right-content">
-                <a href="/get-started.html" class="cta-button">Get Started <img src="IMAGES/bblogo.png" alt=""
+                <a href="first page.html" class="cta-button">Home <img src="IMAGES/bblogo.png" alt=""
                         style="width: 50px;"></a>
             </div>
         </div>
@@ -107,13 +96,85 @@
     </section>
 
     <footer class="footer">
-        <div style="width: 50%; height: 500px;" class="black-section">
-            <p>&copy; 2023 BLUEBRIDGE</p>
-        </div>
-        <div style="width: 50%; height: 500px;" class="blue-section">
+        <section class="about" id="about">
+            <div class="container">
+                <div class="left-container">
+                    <h2>About Us</h2>
+                    <p>Welcome to Bluebridge, your trusted partner in managing digital assets and transactions. We are
+                        dedicated
+                        to providing innovative solutions in the world of cryptocurrencies and blockchain technology.
+                    </p>
 
+                    <p>Our journey began with a simple mission: to make digital asset management accessible, secure, and
+                        efficient for everyone. With a team of experienced professionals and a commitment to excellence,
+                        we have
+                        grown to become a leading name in the industry.</p>
+                    <p>Whether you are an experienced trader or just starting your journey in the world of
+                        cryptocurrencies,
+                        Bluebridge is here to empower you with the tools and services you need to succeed. Join us on
+                        this
+                        exciting digital adventure!</p>
+                    <div class="right-container">
+                        <!-- You can add icons or additional details for each service here if desired -->
+                    </div>
+                </div>
+        </section><br><br><br>
+
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="left-container">
+                    <h2>Our Services</h2>
+                    <p>At Bluebridge, we offer a range of services to meet your digital asset needs. Our services
+                        include:</p>
+                    <ul style=" list-style-type: disc; padding-left: 20px;">
+                        <li>Secure Wallet Management</li>
+                        <li>Fast and Reliable Transactions</li>
+                        <li>Investment Consultation</li>
+                        <li>24/7 Customer Support</li>
+                    </ul>
+                </div>
+                <div class="right-container">
+                    <!-- You can add icons or additional details for each service here if desired -->
+                </div>
+            </div>
+        </section><br><br><br>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="left-container">
+                    <h2>Contact Us</h2>
+                    <p>Here's how you can get in touch with us.</p>
+                </div>
+                <div class="right-container">
+                    <!-- You can add icons or additional details for each service here if desired -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <a href="#" class="back-to-top"> Back to Top <img src="IMAGES/up-arrow.png" alt="" style="width: 30px;"></a>
+        </section>
+        <p>&copy; 2023 BLUEBRIDGE</p>
         </div>
+
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTopLink = document.querySelector(".back-to-top");
+
+            backToTopLink.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                // Scroll to the top of the page with a smooth transition
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                    duration: 10000
+                });
+            });
+        });
+    </script>
 
 </body>
 

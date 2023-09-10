@@ -66,40 +66,6 @@ nav a {
     justify-content: space-between;
 }
 
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    /* Adjust the height as needed */
-    overflow: hidden;
-}
-
-/* Style the individual slides */
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-    background-size: cover;
-    background-position: center;
-    animation: imagefade 6s infinite;
-}
-
-/* Add keyframes for the background image slideshow animation */
-@keyframes imagefade {
-
-    0%,
-    100% {
-        opacity: 0;
-    }
-
-    20%,
-    80% {
-        opacity: 1;
-    }
-}
-
 .left-content {
     color: white;
     text-align: left;
@@ -266,18 +232,42 @@ nav a {
 }
 
 .footer {
-    display: flex;
-
     color: white;
     align-items: center;
-}
-
-.black-section {
-    padding: 100px;
     background-color: black;
+    width: 100%;
+    height: 600px;
+    min-height: 800px;
+    padding: 40px 0;
 }
 
-.blue-section {
-    background: linear-gradient(to bottom right, rgb(5, 99, 171), rgb(23, 69, 167), rgba(255, 255, 255, 9));
-    padding: 100px;
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: slideIn 1s ease;
+}
+
+.left-container {
+    flex: 1;
+}
+
+.right-container {
+    flex: 1;
+    text-align: center;
+}
+
+.back-to-top {
+    text-decoration: none;
+    color: rgb(23, 69, 167);
+    font-weight: bold;
+    float: right;
+}
+
+.back-to-top:hover {
+    text-decoration: solid;
+    color: aliceblue;
 }
